@@ -13,6 +13,20 @@ Key features:
 
 ## 🗂 Project Structure
 
+/detector_project
+├── src/                 # VHDL source files
+│   └── det_cmp.vhd      # FSM sequence detector
+├── tb/                  # Testbench files
+│   └── det_cmp_tb.vhd   # Testbench with assertions
+├── sim/                 # Optional simulation scripts
+│   ├── run_vivado.tcl
+│   └── run_models.pl
+├── docs/                # Documentation
+│   ├── assertions.md
+│   └── timing_diagram.png
+├── .gitignore           # Git ignore file for Vivado/ModelSim
+└── README.md            # This file
+
 
 ---
 

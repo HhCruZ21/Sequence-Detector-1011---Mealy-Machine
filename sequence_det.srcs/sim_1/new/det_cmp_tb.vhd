@@ -157,6 +157,27 @@ begin
         severity failure;
     end loop;
 end process din_timing_check;
+
+functional_check : process
+    variable shift_reg : std_logic_vector(3 downto 0) := "0000";
+begin
+    loop
+        wait until rising_edge(clk);
+        if start = '1' then
+            shift_reg := shift_reg(2 downto 0) & din;
+            if shift_reg = "1011" then
+                assert seq_det = '1'
+                report "Sequence 1011 not detected correctly"
+                severity failure;
+            else
+                assert seq_det = '0'
+                report "False positive detection"
+                severity failure;
+            end if;
+        end if;
+    end loop;
+end process;
+
 end BLOCK assertion_block;
 
 end Behavioral;
