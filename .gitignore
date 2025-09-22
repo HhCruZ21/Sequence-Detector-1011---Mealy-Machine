@@ -1,0 +1,29 @@
+# Vivado junk
+*.jou
+*.log
+*.str
+*.wdb
+*.xpr
+*.runs/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.sim/
+*.xdc
+*.dcp
+
+# ModelSim/Questa junk
+work/
+transcript
+vsim.wlf
+*.ini
+
+# General
+*.swp
+*.bak
+*.tmp
+*.DS_Store
+
+# Ignore generated files, keep source
+!src/*.vhd
+!tb/*.vhd
